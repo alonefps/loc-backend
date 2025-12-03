@@ -54,3 +54,4 @@ git commit -m "refactor: improve use case structure"
 - Use TypeScript de forma estrita
 - Evite any quando possível
 
+

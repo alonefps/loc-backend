@@ -381,3 +381,4 @@ curl localhost:3001/locations > locations.json
 
 **💡 Dica:** Adicione o script `test-api.sh` aos seus favoritos para testar rapidamente a API!
 
+

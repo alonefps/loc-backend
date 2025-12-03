@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CreateLocationUseCase } from './create-location.use-case';
-import { ILocationRepository } from '@domain/repositories/location.repository.interface';
+import type { ILocationRepository } from '@domain/repositories/location.repository.interface';
 import { Location } from '@domain/entities/location.entity';
 
 describe('CreateLocationUseCase', () => {
@@ -59,4 +59,5 @@ describe('CreateLocationUseCase', () => {
     expect(repository.create).toHaveBeenCalled();
   });
 });
+
 

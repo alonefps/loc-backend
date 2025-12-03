@@ -27,3 +27,4 @@ export class LocationModel {
   updatedAt: Date;
 }
 
+

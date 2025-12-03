@@ -14,3 +14,4 @@ export interface UpdateLocationDto {
   imageUrl?: string;
 }
 
+

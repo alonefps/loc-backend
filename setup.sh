@@ -21,3 +21,4 @@ echo "   2. Run 'npm run start:dev' to start the development server"
 echo "   3. Access http://localhost:3001/api/docs for API documentation"
 echo ""
 
+

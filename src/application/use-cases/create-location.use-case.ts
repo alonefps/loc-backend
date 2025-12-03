@@ -1,10 +1,15 @@
+import { Injectable, Inject } from '@nestjs/common';
 import { ILocationRepository } from '@domain/repositories/location.repository.interface';
 import { Location } from '@domain/entities/location.entity';
 import { CreateLocationDto } from '@domain/dtos/location.dto';
 import { randomUUID } from 'crypto';
 
+@Injectable()
 export class CreateLocationUseCase {
-  constructor(private readonly locationRepository: ILocationRepository) {}
+  constructor(
+    @Inject('ILocationRepository')
+    private readonly locationRepository: ILocationRepository
+  ) {}
 
   async execute(data: CreateLocationDto): Promise<Location> {
     const location = new Location(
@@ -21,4 +26,5 @@ export class CreateLocationUseCase {
     return this.locationRepository.create(location);
   }
 }
+
 

@@ -1,7 +1,12 @@
+import { Injectable, Inject } from '@nestjs/common';
 import { ILocationRepository } from '@domain/repositories/location.repository.interface';
 
+@Injectable()
 export class DeleteLocationUseCase {
-  constructor(private readonly locationRepository: ILocationRepository) {}
+  constructor(
+    @Inject('ILocationRepository')
+    private readonly locationRepository: ILocationRepository
+  ) {}
 
   async execute(id: string): Promise<void> {
     if (!id || id.trim().length === 0) {
@@ -16,4 +21,5 @@ export class DeleteLocationUseCase {
     await this.locationRepository.delete(id);
   }
 }
+
 

@@ -176,3 +176,4 @@ O backend está 100% completo e pronto para:
 
 **Stack:** NestJS • TypeScript • TypeORM • SQLite/PostgreSQL • Swagger • Jest
 
+

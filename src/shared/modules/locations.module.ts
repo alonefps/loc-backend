@@ -56,3 +56,4 @@ import { LocationsController } from '@infrastructure/http/controllers/locations.
 })
 export class LocationsModule {}
 
+

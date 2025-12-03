@@ -1,8 +1,13 @@
+import { Injectable, Inject } from '@nestjs/common';
 import { ILocationRepository } from '@domain/repositories/location.repository.interface';
 import { Location } from '@domain/entities/location.entity';
 
+@Injectable()
 export class GetLocationByIdUseCase {
-  constructor(private readonly locationRepository: ILocationRepository) {}
+  constructor(
+    @Inject('ILocationRepository')
+    private readonly locationRepository: ILocationRepository
+  ) {}
 
   async execute(id: string): Promise<Location | null> {
     if (!id || id.trim().length === 0) {
@@ -12,4 +17,5 @@ export class GetLocationByIdUseCase {
     return this.locationRepository.findById(id);
   }
 }
+
 

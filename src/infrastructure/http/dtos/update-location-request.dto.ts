@@ -51,3 +51,4 @@ export class UpdateLocationRequestDto {
   imageUrl?: string;
 }
 
+

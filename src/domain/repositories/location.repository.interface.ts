@@ -8,3 +8,4 @@ export interface ILocationRepository {
   delete(id: string): Promise<void>;
 }
 
+
